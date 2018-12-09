@@ -8,9 +8,15 @@ import sqlite3
 app = Flask(__name__)
 @app.route("/")
 def hostname():
+    """
+    Returns current hostname.
+    """
     return platform.node()
 @app.route("/counter/")
 def counter():
+    """
+    A recieve function for conter addition and listing.
+    """
     # Assign arguments
     to = request.args.get('to')
 
@@ -20,6 +26,9 @@ def counter():
     else:
         return counter_list()
 def counter_add(to):
+    """
+    Adds a counter.
+    """
     # Generate uuid
     generated_uuid = str(uuid.uuid1())
 
@@ -39,6 +48,9 @@ def counter_add(to):
     # Return success
     return str(generated_uuid)
 def counter_list():
+    """
+    Lists all the active counters.
+    """
     # Declare variables
     result = ""
 
