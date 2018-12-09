@@ -15,7 +15,7 @@ if (( app_amount < target_app_amount ))
 then
     for (( i = 0; i < target_app_amount-app_amount; i++ ))
     do
-    docker run -v `pwd`/db:/db -d -e VIRTUAL_HOST=domain.local rest-api-app
+    docker run -v `pwd`/db:/db -d -e VIRTUAL_HOST=localhost rest-api-app
     done
 elif (( app_amount > target_app_amount ))
 then

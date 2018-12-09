@@ -27,6 +27,12 @@ sudo install.sh
 sudo ./test_no_coverage.sh
 ```
 
+### Use
+
+```bash
+curl -s http://localhost/counter/?to=1000
+```
+
 ## Infrastructure
 
 ![Infra](https://s3.ap-northeast-2.amazonaws.com/file.cpuabuse.com/public/boop/imageset/programming/site/2018-10-26/0784eec8a2ad9027923d8ec9af34d970.PNG)
