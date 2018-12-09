@@ -16,7 +16,7 @@ def counter():
 
     # Call subroutines
     if to:
-        return counter_add(int(to))
+        return counter_add(int(to)) + "\n"
     else:
         return counter_list()
 def counter_add(to):
@@ -37,7 +37,7 @@ def counter_add(to):
     p.start()
     
     # Return success
-    return str(generated_uuid) + "\n"
+    return str(generated_uuid)
 def counter_list():
     # Declare variables
     result = ""
