@@ -34,3 +34,9 @@ sudo ./test_no_coverage.sh
 ### Database
 
 `db/db_creation.sql` is added for reference purposes only, otherwise the database is to be used "as is".
+
+### Notes
+
+- Using third party image to run nginx proxy server
+- Even though the counters are not physically deleted from the database upon app server shutdown, the functionality is fully preserved
+- Tests are submitted to [coveralls](https://coveralls.io/github/foamy-latte/line-docker-counter) from the docker container inside of the travis container. The choice to use the docker inside travis is due to design, as we might want to have some test that require cross container testing. The warnings/errors coming up from within the travis builds are expected and not to be treated as errors, as the tests are run from within the docker and not the travis itself. The coverage shows lower than it actually is(close to 100%) due to testing functions directly, and not through testing Flask, I assume.
