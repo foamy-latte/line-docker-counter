@@ -2,6 +2,8 @@ language: python
 python:
   - "3.6"
 before_script:
-  - ./install.sh
+  - |
+    chmod +x install.sh
+    ./install.sh
 script:
   - ./test.sh
