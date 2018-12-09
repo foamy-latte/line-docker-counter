@@ -1,3 +1,5 @@
+# Performs tests of app.py
+
 import app
 
 # content of test_sample.py

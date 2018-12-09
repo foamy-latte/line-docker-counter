@@ -1,4 +1,5 @@
 #!/bin/bash
+# Creates/deletes the app instances
 # Assign arguments
 target_app_amount=$1
 

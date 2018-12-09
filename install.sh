@@ -1,4 +1,5 @@
 #!/bin/bash
+# Installs dependencies for app to run
 # Dependencies
 apt -y install curl
 curl -sSL https://get.docker.com/ | sh
